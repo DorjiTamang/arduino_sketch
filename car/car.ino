@@ -44,7 +44,7 @@ void loop() {
   int distance2 = getDistance2();
   int distance3 = getDistance3();
 
-  if (distance1 < 30) {
+  if (distance1 < 20) {
     stopMotors();
     delay(1000);
     reverse();
@@ -106,16 +106,16 @@ void stopMotors(){
   analogWrite(enableB, 0);
 }
 
+  
 void reverse(){
   digitalWrite(motorA1, LOW);
   digitalWrite(motorA2, HIGH);
   analogWrite(enableA, 100); 
 
-  digitalWrite(motorB1, LOW);
-  digitalWrite(motorB2, HIGH);
-  analogWrite(enableB, 100);
+  digitalWrite(motorB1, HIGH);
+  digitalWrite(motorB2, LOW);
+  analogWrite(enableB, 75);
 }
-
 void driveForward(){
   digitalWrite(motorA1, HIGH);
   digitalWrite(motorA2, LOW);
@@ -124,24 +124,25 @@ void driveForward(){
   digitalWrite(motorB1, HIGH);
   digitalWrite(motorB2, LOW);
   analogWrite(enableB, 100);
-  
 }
+
+
 void turnright(){
   digitalWrite(motorA1, HIGH);
   digitalWrite(motorA2, LOW);
-  analogWrite(enableA, 100);
+  analogWrite(enableA, 85);
   
   digitalWrite(motorB1, LOW);
   digitalWrite(motorB2, HIGH);
-  analogWrite(enableB, 100);
+  analogWrite(enableB, 85);
   
 }
 void turnleft(){
   digitalWrite(motorA1, LOW);
   digitalWrite(motorA2, HIGH);
-  analogWrite(enableA, 100);
+  analogWrite(enableA, 85);
   
   digitalWrite(motorB1, HIGH);
   digitalWrite(motorB2, LOW);
-  analogWrite(enableB, 100);
+  analogWrite(enableB, 85);
 }
