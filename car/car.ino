@@ -114,7 +114,7 @@ void reverse(){
 
   digitalWrite(motorB1, HIGH);
   digitalWrite(motorB2, LOW);
-  analogWrite(enableB, 75);
+  analogWrite(enableB, 85);
 }
 void driveForward(){
   digitalWrite(motorA1, HIGH);
