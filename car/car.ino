@@ -14,8 +14,8 @@ const int motorB2 =13;  // IN4
 const int enableB =11; // ENB (PWM)
 
 
-#define MAX_DISTANCE 200 // Maximum distanc
-
+#define MAX_DISTANCE 200 // Maximum distance
+  
 void setup() {
   
   Serial.begin(9600);
@@ -36,8 +36,10 @@ void setup() {
   pinMode(motorB1, OUTPUT);
   pinMode(motorB2, OUTPUT);
   pinMode(enableB, OUTPUT);
-  
 }
+
+ 
+
   
 void loop() {
   int distance1 = getDistance1();
@@ -117,13 +119,13 @@ void reverse(){
   analogWrite(enableB, 85);
 }
 void driveForward(){
-  digitalWrite(motorA1, HIGH);
+ digitalWrite(motorA1, HIGH);
   digitalWrite(motorA2, LOW);
-  analogWrite(enableA, 100);
-  
+  analogWrite(enableA, 100); 
+
   digitalWrite(motorB1, HIGH);
   digitalWrite(motorB2, LOW);
-  analogWrite(enableB, 100);
+  analogWrite(enableB, 85);
 }
 
 
