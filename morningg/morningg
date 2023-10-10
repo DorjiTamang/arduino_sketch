@@ -1,0 +1,17 @@
+void setup(){}
+
+ int  addition(int number, int increment){
+            int sum = number + increment;
+            return sum;
+ }
+
+int  multiply(int number, int factor){
+            int product = number + factor;
+            return product;
+ }
+
+
+   void loop(){
+    int sum = addition(2,2);
+    int product = multiply(3,3);
+}
