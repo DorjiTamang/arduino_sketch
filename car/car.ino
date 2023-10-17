@@ -1,10 +1,13 @@
+
+// Define pins for the  ultrasonic sensor
+
 #define TRIG_PIN1 2 // Ultrasonic sensor 1 trigger pin
 #define ECHO_PIN1 3 // Ultrasonic sensor 1 echo pin
 #define TRIG_PIN2 4 // Ultrasonic sensor 2 trigger pin
 #define ECHO_PIN2 5 // Ultrasonic sensor 2 echo pin
 #define TRIG_PIN3 6 // Ultrasonic sensor 3 trigger pin
 #define ECHO_PIN3 7 // Ultrasonic sensor 3 echo pin
-
+// Define 
 const int motorA1 =8;  // IN1
 const int motorA2 =10;  // IN2
 const int enableA =9;  // ENA (PWM)
@@ -69,6 +72,8 @@ void loop() {
   
 }
 
+  // Function to get distance from the ultrasonic sensor
+
 int getDistance1(){
   digitalWrite(TRIG_PIN1, LOW);
   delayMicroseconds(20);
@@ -98,7 +103,7 @@ int getDistance3(){
 
 
 
-
+// function to stop mortors
 void stopMotors(){
   digitalWrite(motorA1, LOW);
   digitalWrite(motorA2, LOW);
