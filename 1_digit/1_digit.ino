@@ -1,5 +1,5 @@
 
-int A = 7;  
+#int A = 7;  
 int B = 6;
 int C = 4;  
 int D = 3;
